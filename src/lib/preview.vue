@@ -1,5 +1,5 @@
 <template>
-	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" @contextmenu.prevent="rightClick">
 
         <!-- Background of PhotoSwipe. 
             It's a separate element as animating opacity is faster than rgba(). -->
@@ -69,7 +69,10 @@
 	import 'photoswipe/dist/photoswipe.css'
     import 'photoswipe/dist/default-skin/default-skin.css'
     export default{
-
+	  methods: {
+	  	 rightClick (MouseEvent) {
+    },
+	  }
     }
     
 </script>
